@@ -13,27 +13,31 @@ function App() {
         </div>
       </nav>
 
-      <section className="hero">
-        <h1>Hi, I'm Kyle.</h1>
-        <h2>Aspiring Web Developer</h2>
-        <p>
-          I'm an IT student interested in web development,
-          programming, and design. I'm currently learning
-          and building projects to improve my skills.
-        </p>
-        <a href="#projects" className="button">
-          View My Projects
-        </a>
-      </section>
+     
+<section className="hero">
+  <p className="hero-greeting">WELCOME TO MY PORTFOLIO</p>
 
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          I'm currently studying Information Technology.
-          I enjoy learning new technologies and creating
-          simple, useful applications.
-        </p>
-      </section>
+  <h1>
+    Hi, I'm <span>Kyle.</span>
+  </h1>
+
+  <h2>Aspiring Web Developer</h2>
+
+  <p className="hero-description">
+    I'm an Information Technology student passionate
+    about programming, web development, and creating
+    useful digital experiences.
+  </p>
+
+  <p className="hero-focus">
+    Currently learning React, Java, and C#.
+  </p>
+
+  <a href="#projects" className="button">
+    Explore My Work →
+  </a>
+</section>
+
 
       <section id="projects">
         <h2>My Projects</h2>
