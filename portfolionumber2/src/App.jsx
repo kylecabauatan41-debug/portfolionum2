@@ -5,7 +5,7 @@ function App() {
   return (
    <div className="container">
       <nav>
-        <h2>Kyle.</h2>
+        <h2>My Portfolio</h2>
         <div>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -43,8 +43,8 @@ function App() {
         <h2>My Projects</h2>
 
         <div className="project">
-          <h3>Personal Portfolio</h3>
-          <p>A simple portfolio website built using React and CSS.</p>
+          <h3>Java Forms Game</h3>
+          <p>Made a JavaForms matching game as a project</p>
         </div>
 
         <div className="project">
@@ -55,7 +55,7 @@ function App() {
 
       <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: your-email@example.com</p>
+        <p>Email: Kylemarco.cabauatan@cvsu.edu.ph</p>
       </section>
 
       <footer>
