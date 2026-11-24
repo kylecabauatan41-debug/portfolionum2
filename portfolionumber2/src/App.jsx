@@ -23,11 +23,23 @@ function App() {
 
   <h2>Aspiring Web Developer</h2>
 
-  <p className="hero-description">
-    I'm an Information Technology student passionate
-    about programming, web development, and creating
-    useful digital experiences.
+  
+<section id="about">
+  <h2>About Me</h2>
+
+  <p>
+    I'm an Information Technology student currently
+    developing my skills in programming and web development.
+    I enjoy exploring new technologies, solving problems,
+    and building applications through hands-on projects.
   </p>
+
+  <p>
+    My goal is to become a well-rounded developer while
+    continuously learning and improving my technical skills.
+  </p>
+</section>
+
 
   <p className="hero-focus">
     Currently learning React, Java, and C#.
