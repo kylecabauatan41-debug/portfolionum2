@@ -1,80 +1,105 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+ 
+  const [page, setPage] = useState("home");
 
   return (
-   <div className="container">
+    <div className="app">
+      {/* The faded background image */}
+      <div className="background"></div>
+
+     
       <nav>
-        <h2>My Portfolio</h2>
+        <button className="logo" onClick={() => setPage("home")}>
+          My Portfolio
+        </button>
+
         <div>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <button onClick={() => setPage("about")}>About</button>
+          <button onClick={() => setPage("projects")}>Projects</button>
+          <button onClick={() => setPage("skills")}>Skills</button>
+          <button onClick={() => setPage("contact")}>Contact</button>
         </div>
       </nav>
 
-     
-<section className="hero">
-  <p className="hero-greeting">WELCOME TO MY PORTFOLIO</p>
+      <section className="panel" key={page}>
 
-  <h1>
-    Hi, I'm <span>Kyle.</span>
-  </h1>
+      {page === "home" && (
+       <div>
+       <p className = "greeting slide delay1">WELCOME TO MY PORTFOLIO</p>
+      
+      <h1 className = "slide delay2"> Hi, I'm <span>Kyle.</span> </h1>
+      
+      <p className="slide delay3"> I'm an Information Technology student developing my skills in
+              programming and web development.
+            </p>
 
-  <h2>Aspiring Web Developer</h2>
+          <p className="slide delay4">Currently learning React, Java, and C#.</p>
 
-  
-<section id="about">
-  <h2>About Me</h2>
+      <button className="button slide delay6" onClick={() => setPage("projects")}>
+              Explore My Work →
+         </button>
+         </div>
+      )}
 
-  <p>
-    I'm an Information Technology student currently
-    developing my skills in programming and web development.
-    I enjoy exploring new technologies, solving problems,
-    and building applications through hands-on projects.
-  </p>
+    {page === "about" && (
+      <div>
+        <h1 className="slide delay1"> About Me</h1>
 
-  <p>
-    My goal is to become a well-rounded developer while
-    continuously learning and improving my technical skills.
-  </p>
-</section>
+       <p className="slide delay2">
+              I'm an Information Technology student currently developing my
+              skills in programming and web development. I enjoy exploring new
+              technologies, solving problems, and building applications through
+              hands-on projects.
+       </p>
+       <p className="slide delay3">
+              My goal is to become a well-rounded developer while continuously
+              learning and improving my technical skills.
+       </p>
+
+      </div>
+    )}
+
+    {page === "projects" && (
+     <div>
+      <h1 className = "slide delay1">My Projects I've Worked on</h1>
+
+      <div className="project slide delay2">
+        <h3>Java Matching Cards Game</h3>
+        <p>A matching card game made with Java Forms for a school project.</p>
+            </div>
+      
+      <div className="project slide delay3">
+        <h3>C# Simon Says</h3>
+        <p>Simon says game themed with Among us </p>
+            </div>
+     </div>
 
 
-  <p className="hero-focus">
-    Currently learning React, Java, and C#.
-  </p>
-
-  <a href="#projects" className="button">
-    Explore My Work →
-  </a>
-</section>
+    )}
 
 
-      <section id="projects">
-        <h2>My Projects</h2>
 
-        <div className="project">
-          <h3>Java Forms Game</h3>
-          <p>Made a JavaForms matching game as a project</p>
-        </div>
 
-        <div className="project">
-          <h3>Project 2</h3>
-          <p>More of my projects will be added here soon.</p>
-        </div>
-      </section>
 
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: Kylemarco.cabauatan@cvsu.edu.ph</p>
-      </section>
 
-      <footer>
-        <p>© 2026 Kyle. All rights reserved.</p>
-      </footer>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+     </section>
+   </div>  
   );
 }
 
-export default App
+export default App;
