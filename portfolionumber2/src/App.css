@@ -31,9 +31,7 @@ body {
   background-size: cover;
   background-position: center;
 }
- 
-/* ---------- Nav ---------- */
- 
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -52,29 +50,30 @@ nav button {
 }
  
 nav button:hover {
-  color: #60a5fa;
+  color: #9B3F34;
 }
  
 nav .logo {
-  color: #60a5fa;
+  color: #9B3F34;
   font-size: 32px;
   font-weight: bold;
+  font-family: "Sixtyfour Convergence", sans-serif;
 }
 
 .panel {
-  flex: 1; 
+  flex: 0.95; 
   overflow-y: auto; 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 50px;
+  padding: 100px;
   background: rgba(22, 22, 24, 0.7);
   border: 1px solid #333;
   border-radius: 28px;
 }
  
 .greeting {
-  color: #3b82f6;
+  color: #9B3F34;
   font-size: 14px;
   letter-spacing: 3px;
 }
@@ -83,7 +82,7 @@ h1 {
   font-size: 64px;
   margin-bottom: 10px;
 }
- 
+
 p {
   max-width: 600px;
   line-height: 1.8;
@@ -92,25 +91,9 @@ p {
   font-size: 20px;
 }
  
-h1 span {
-  background: linear-gradient(90deg, #274577, #587dc6, #fbfcfe, #587dc6, #274577);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  display: inline-block;
-  animation: gradientMove 4s linear infinite;
-}
- 
-@keyframes gradientMove {
-  to {
-    background-position: 200% center;
-  }
-}
- 
 .button {
   display: inline-block;
-  background: #3b82f6;
+  background: #9B3F34;
   color: white;
   font-size: 18px;
   padding: 12px 24px;
@@ -121,7 +104,7 @@ h1 span {
 }
  
 .button:hover {
-  background: #2563eb;
+  background: #9B3F34;
 }
  
 .project {
@@ -129,7 +112,8 @@ h1 span {
   background: #1e1e1e;
   border: 1px solid #333;
   border-radius: 8px;
-  padding: 20px;
+  padding: 24px;
+  margin-top : 15px;
   margin-bottom: 14px;
 }
  
@@ -143,6 +127,39 @@ h1 span {
   font-size: 18px;
 }
  
+.chip {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px 10px 0;
+  border: 1px solid #444;
+  border-radius: 20px;
+  background: rgba(96, 165, 250, 0.1);
+  font-size: 18px;
+}
+.gradienttext {
+  background: linear-gradient(
+  90deg, 
+  #94001B, 
+  #982826, 
+  #fbfcfe,
+  #982826, 
+  #94001B
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  animation: gradientMove 4s linear infinite;
+  will-change: background-position ;
+}
+ 
+@keyframes gradientMove {
+  to {
+    background-position: 200% center;
+  }
+}
+
 .slide {
   opacity: 0;
   animation: slideIn 0.8s ease forwards;
@@ -157,8 +174,9 @@ h1 span {
     opacity: 1;
     transform: translateX(0);
   }
+  
 }
- 
+
 .delay1 { animation-delay: 0.1s; }
 .delay2 { animation-delay: 0.25s; }
 .delay3 { animation-delay: 0.4s; }
