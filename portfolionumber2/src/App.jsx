@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./App.css";
+import { FaDiscord, FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 function App() {
  
@@ -7,16 +10,15 @@ function App() {
 
   return (
     <div className="app">
-      {/* The faded background image */}
-      <div className="background"></div>
 
+      <div className="background"></div>
      
       <nav>
         <button className="logo" onClick={() => setPage("home")}>
           Kyle's Portfolio
         </button>
 
-        <div>
+        <div className="navlinks">
           <button onClick={() => setPage("about")}>About</button>
           <button onClick={() => setPage("projects")}>Projects</button>
           <button onClick={() => setPage("skills")}>Skills</button>
@@ -45,6 +47,8 @@ function App() {
       )}
 
     {page === "about" && (
+      <div className = "abtrow">
+
       <div>
         <h1 className="slide delay1"> <span className="gradienttext">About Me</span> </h1>
 
@@ -54,17 +58,25 @@ function App() {
               technologies, solving problems, and building applications through
               hands-on projects.
        </p>
-       <p className="slide delay3">
+
+      <p className="slide delay3">
+              I've also got plenty of interest outside technology and codes
+       </p>
+
+       <p className="slide delay4">
               My goal is to become a well-rounded developer while continuously
               learning and improving my technical skills.
        </p>
+      </div>
+
+      <img className="pfp slide delay2" src="/me.jpg" alt="me"></img>
 
       </div>
     )}
 
     {page === "projects" && (
      <div>
-      <h1 className = "slide delay1">My Projects I've <span className ="gradienttext">Worked on</span></h1>
+      <h1 className = "slide delay1">Projects I've <span className ="gradienttext">Worked on</span></h1>
       <h3 className = "slide delay2"><span className ="gradienttext">and currently working on</span></h3>
 
       <div className="project slide delay3">
@@ -96,23 +108,33 @@ function App() {
      </div>
     )}
 
+    {page === "contact" && (
+     <div className="contact">
+         <h1 className="slide delay1"><span className="gradienttext">Follow me!</span></h1>
 
+     <div className="socials slide delay2">
+           <a href="https://discord.com/users/jihyee_1" target="_blank" rel="noreferrer">
+           <FaDiscord />
+           </a>
+          <a href="https://www.facebook.com/kyle.cabauatan.2024" target="_blank" rel="noreferrer">
+           <FaFacebookF />
+           </a>
+           <a href="https://www.instagram.com/amorrri_/" target="_blank" rel="noreferrer">
+           <FaInstagram />
+          </a>
+           <a href="https://x.com/KusoCre" target="_blank" rel="noreferrer">
+          <FaXTwitter />
+          </a>
+           <a href="https://www.tiktok.com/@ommnom1" target="_blank" rel="noreferrer">
+          <FaTiktok />
+      </a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+    <p className="handle slide delay3">Gmail : Kylecabauatan41@gmail.com</p>
+  </div>
+)}
      </section>
-   </div>  
+   </div> 
   );
 }
 
